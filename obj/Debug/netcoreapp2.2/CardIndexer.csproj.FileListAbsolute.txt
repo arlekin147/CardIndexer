@@ -1,0 +1,11 @@
+/home/ivan/Documents/CardIndexer/bin/Debug/netcoreapp2.2/CardIndexer.deps.json
+/home/ivan/Documents/CardIndexer/bin/Debug/netcoreapp2.2/CardIndexer.runtimeconfig.json
+/home/ivan/Documents/CardIndexer/bin/Debug/netcoreapp2.2/CardIndexer.runtimeconfig.dev.json
+/home/ivan/Documents/CardIndexer/bin/Debug/netcoreapp2.2/CardIndexer.dll
+/home/ivan/Documents/CardIndexer/bin/Debug/netcoreapp2.2/CardIndexer.pdb
+/home/ivan/Documents/CardIndexer/obj/Debug/netcoreapp2.2/CardIndexer.csprojAssemblyReference.cache
+/home/ivan/Documents/CardIndexer/obj/Debug/netcoreapp2.2/CardIndexer.csproj.CoreCompileInputs.cache
+/home/ivan/Documents/CardIndexer/obj/Debug/netcoreapp2.2/CardIndexer.AssemblyInfoInputs.cache
+/home/ivan/Documents/CardIndexer/obj/Debug/netcoreapp2.2/CardIndexer.AssemblyInfo.cs
+/home/ivan/Documents/CardIndexer/obj/Debug/netcoreapp2.2/CardIndexer.dll
+/home/ivan/Documents/CardIndexer/obj/Debug/netcoreapp2.2/CardIndexer.pdb
