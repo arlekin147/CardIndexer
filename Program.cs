@@ -1,4 +1,5 @@
-﻿using Google.Apis.Auth.OAuth2;
+﻿using System.Data;
+using Google.Apis.Auth.OAuth2;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
 using Google.Apis.Services;
@@ -7,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
+using CardIndexer.Configuration;
 
 namespace CardIndexer
 {
@@ -25,6 +27,21 @@ namespace CardIndexer
                     }
                 }
             }
+            else
+            {
+                Console.WriteLine("No data found.");
+            }
+
+            IConfigurationParser parser = new TomlConfigurationParser("test.toml");
+            Console.WriteLine("Source: " + parser.Source);
+            foreach(var entity in parser.DataModels){
+                Console.WriteLine("Model: " + entity.Key);
+                foreach(var field in entity.Value){
+                    Console.WriteLine("Field: " + field);
+                }
+            }
+
+            Console.Read();
         }
     }
 }
