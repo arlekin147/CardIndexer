@@ -1,7 +1,7 @@
 # This is a TOML document. Boom.
 
-[Source]
-googleSheetSource = "ogo"
+#[Source]
+#googleSheetSource = "ogo"
 
 [DataModel]
 name = "Person"
