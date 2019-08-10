@@ -15,7 +15,7 @@ namespace CardIndexer
         static void Main(string[] args)
         {
             var grepper = new Grepper();
-            grepper.Process("1wG0fe0cv157kIsbGqapP_2n8hzQRET0VspU0t6KyNuU", "Class Data", "Person", new List<string>{"A", "D"});
+            grepper.Process("1wG0fe0cv157kIsbGqapP_2n8hzQRET0VspU0t6KyNuU", "Class Data", "Person", new List<string>{"Student Name", "Major"});
         }
     }
 }
