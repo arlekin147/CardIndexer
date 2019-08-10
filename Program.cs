@@ -15,7 +15,16 @@ namespace CardIndexer
         static void Main(string[] args)
         {
             var grepper = new Grepper();
-            grepper.Process("1wG0fe0cv157kIsbGqapP_2n8hzQRET0VspU0t6KyNuU", "Class Data", "Person", new List<string>{"Student Name", "Major"});
+            var data = grepper.Process("1wG0fe0cv157kIsbGqapP_2n8hzQRET0VspU0t6KyNuU", "Class Data", "Person");
+            foreach (var group in data) {
+                Console.WriteLine("Group begins");
+                foreach (var item in group) {
+                    Console.WriteLine("Item begins");
+                    foreach (var field in item) {
+                        Console.WriteLine(String.Format("{0}: {1}", field.Key, field.Value));
+                    }
+                }
+            }
         }
     }
 }

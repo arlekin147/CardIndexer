@@ -39,13 +39,13 @@ namespace CardIndexer {
             });
 
         }
-        public void Process(string sheetsId, string tableName, string entityName, List<string> mainFields)
+        public IEnumerable<List<Dictionary<string, string>>> Process(string sheetsId, string tableName, string entityName)
         {
             // TODO to extend maximum row further Z
             var propertyValues = service.Spreadsheets.Values.Get(sheetsId, String.Format("{0}!A{1}:Z{2}", tableName, 1, 1)).Execute().Values;
 
             if (propertyValues == null || propertyValues.Count == 0) {
-                return;
+                yield break;
             }
 
             var propertyRow = propertyValues[0];
@@ -61,9 +61,11 @@ namespace CardIndexer {
                     break;
                 }
 
+                IGroupBuilder builder = new KeyValueBuilder();
                 for (int rowId = 0; rowId < response.Values.Count; rowId++)
                 {
                     var recordId = (group * groupSize + 2) + rowId;
+                    builder.startNewGroup(recordId);
                     var row = response.Values[rowId];
                     for (int i = 0; i < propertiesCount; i++)
                     {
@@ -79,16 +81,19 @@ namespace CardIndexer {
                         }
                         
                         
-                        if (mainFields.Exists((elem) => elem.Equals(currentKey)))
-                        {
-                            Console.Write("(M)");
-                        }
+                        // if (mainFields.Exists((elem) => elem.Equals(currentKey)))
+                        // {
+                        //     Console.Write("(M)");
+                        // }
                         // Push to some dict instead
-                        Console.Write(String.Format("Id={0}, Key={1}, Value={2}\n", recordId, currentKey, value));
+
+                        builder.addProperty(currentKey, value);
                     }
-                    Console.WriteLine("");
+                    builder.finalizeGroup();
                 }
+                yield return builder.toGroupList();
             }
+            yield break;
         }
     }
 }
