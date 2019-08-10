@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/home/ivan/Documents/CardIndexer/CardIndexer.csproj": {}
+    "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj": {}
   },
   "projects": {
-    "/home/ivan/Documents/CardIndexer/CardIndexer.csproj": {
+    "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ivan/Documents/CardIndexer/CardIndexer.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj",
         "projectName": "CardIndexer",
-        "projectPath": "/home/ivan/Documents/CardIndexer/CardIndexer.csproj",
-        "packagesPath": "/home/ivan/.nuget/packages/",
-        "outputPath": "/home/ivan/Documents/CardIndexer/obj/",
+        "projectPath": "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\CardIndexer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/ivan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -39,6 +39,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "Carbon.Toml": {
+              "target": "Package",
+              "version": "[0.16.0, )"
+            },
             "Google.Apis.Sheets.v4": {
               "target": "Package",
               "version": "[1.40.3.1671, )"

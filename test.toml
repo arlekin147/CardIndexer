@@ -1,0 +1,8 @@
+# This is a TOML document. Boom.
+
+#[Source]
+#googleSheetSource = "ogo"
+
+[DataModel]
+name = "Person"
+mainFields = ["Name", "Surname", "Age"]
