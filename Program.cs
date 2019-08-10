@@ -14,8 +14,8 @@ namespace CardIndexer
     {
         static void Main(string[] args)
         {
-            var grepper = new Grepper();
-            var data = grepper.Process("1wG0fe0cv157kIsbGqapP_2n8hzQRET0VspU0t6KyNuU", "Class Data", "Person");
+            var grepper = new SheetsGrepper();
+            var data = grepper.Fetch("1wG0fe0cv157kIsbGqapP_2n8hzQRET0VspU0t6KyNuU", "Class Data");
             foreach (var group in data) {
                 Console.WriteLine("Group begins");
                 foreach (var item in group) {

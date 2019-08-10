@@ -9,14 +9,14 @@ using System.Threading;
 using System;
 
 namespace CardIndexer {
-    class Grepper {
+    class SheetsGrepper : IGrepper {
         static string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
         static string ApplicationName = "CardIndexer";
 
         UserCredential credential;
         SheetsService service;
 
-        public Grepper() {
+        public SheetsGrepper() {
             using (var stream =
                 new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
             {
@@ -39,7 +39,7 @@ namespace CardIndexer {
             });
 
         }
-        public IEnumerable<List<Dictionary<string, string>>> Process(string sheetsId, string tableName, string entityName)
+        public IEnumerable<List<Dictionary<string, string>>> Fetch(string sheetsId, string tableName)
         {
             // TODO to extend maximum row further Z
             var propertyValues = service.Spreadsheets.Values.Get(sheetsId, String.Format("{0}!A{1}:Z{2}", tableName, 1, 1)).Execute().Values;
