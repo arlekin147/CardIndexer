@@ -2,6 +2,30 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "Carbon.Json/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Carbon.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Carbon.Json.dll": {}
+        }
+      },
+      "Carbon.Toml/0.16.0": {
+        "type": "package",
+        "dependencies": {
+          "Carbon.Json": "1.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Carbon.Toml.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Carbon.Toml.dll": {}
+        }
+      },
       "Google.Apis/1.40.3": {
         "type": "package",
         "dependencies": {
@@ -780,6 +804,15 @@
           "ref/netstandard1.3/_._": {}
         }
       },
+      "System.Text.Encodings.Web/4.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+        }
+      },
       "System.Text.RegularExpressions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -880,6 +913,30 @@
     }
   },
   "libraries": {
+    "Carbon.Json/1.9.0": {
+      "sha512": "DUkE1HfPwDpXI+7KsemHHK+EhtS08llue3SQDkVZkzCmX8SJiMv1vpHi5p7HbjkDZfb28J+aPsNOlBRE016RYA==",
+      "type": "package",
+      "path": "carbon.json/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "carbon.json.1.9.0.nupkg.sha512",
+        "carbon.json.nuspec",
+        "lib/netstandard2.0/Carbon.Json.dll"
+      ]
+    },
+    "Carbon.Toml/0.16.0": {
+      "sha512": "l/q5gk275WxgeSJHmT75/CPRRoa+tzu0+IcC0qb0cM91e3X1wfEoVBVzNi28V+wnHhLYwnYIJqbZpybvoSkhgA==",
+      "type": "package",
+      "path": "carbon.toml/0.16.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "carbon.toml.0.16.0.nupkg.sha512",
+        "carbon.toml.nuspec",
+        "lib/netstandard2.0/Carbon.Toml.dll"
+      ]
+    },
     "Google.Apis/1.40.3": {
       "sha512": "c0mxhENGADXG7cqIjvdNxjKICwEg3q4moBPDKPElKl3TgAoA3+PdPEg129wFkBkQdvwYVYyWW0Z4cVs8411j9A==",
       "type": "package",
@@ -3401,6 +3458,25 @@
         "system.text.encoding.extensions.nuspec"
       ]
     },
+    "System.Text.Encodings.Web/4.5.0": {
+      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+      "type": "package",
+      "path": "system.text.encodings.web/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.4.5.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Text.RegularExpressions/4.3.0": {
       "sha512": "RpT2DA+L660cBt1FssIE9CAGpLFdFPuheB7pLpKpn6ZXNby7jDERe8Ua/Ne2xGiwLVG2JOqziiaVCGDon5sKFA==",
       "type": "package",
@@ -3749,28 +3825,29 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Carbon.Toml >= 0.16.0",
       "Google.Apis.Sheets.v4 >= 1.40.3.1671",
       "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
   "packageFolders": {
-    "/home/ivan/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ivan/Documents/CardIndexer/CardIndexer.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj",
       "projectName": "CardIndexer",
-      "projectPath": "/home/ivan/Documents/CardIndexer/CardIndexer.csproj",
-      "packagesPath": "/home/ivan/.nuget/packages/",
-      "outputPath": "/home/ivan/Documents/CardIndexer/obj/",
+      "projectPath": "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\CardIndexer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/ivan/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
@@ -3792,6 +3869,10 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "Carbon.Toml": {
+            "target": "Package",
+            "version": "[0.16.0, )"
+          },
           "Google.Apis.Sheets.v4": {
             "target": "Package",
             "version": "[1.40.3.1671, )"

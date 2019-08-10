@@ -9,3 +9,14 @@
 /home/ivan/Documents/CardIndexer/obj/Debug/netcoreapp2.2/CardIndexer.AssemblyInfo.cs
 /home/ivan/Documents/CardIndexer/obj/Debug/netcoreapp2.2/CardIndexer.dll
 /home/ivan/Documents/CardIndexer/obj/Debug/netcoreapp2.2/CardIndexer.pdb
+C:\Users\USER\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.deps.json
+C:\Users\USER\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.runtimeconfig.json
+C:\Users\USER\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.runtimeconfig.dev.json
+C:\Users\USER\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.dll
+C:\Users\USER\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.pdb
+C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.csprojAssemblyReference.cache
+C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.csproj.CoreCompileInputs.cache
+C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.AssemblyInfoInputs.cache
+C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.AssemblyInfo.cs
+C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.dll
+C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.pdb
