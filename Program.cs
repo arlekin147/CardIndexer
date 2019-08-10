@@ -27,10 +27,6 @@ namespace CardIndexer
                     }
                 }
             }
-            else
-            {
-                Console.WriteLine("No data found.");
-            }
 
             IConfigurationParser parser = new TomlConfigurationParser("test.toml");
             Console.WriteLine("Source: " + parser.Source);
