@@ -3,38 +3,38 @@ using System.Collections.Generic;
 namespace CardIndexer {
     class KeyValueBuilder : IGroupBuilder {
 
-        List<Dictionary<string, string>> groups;
-        Dictionary<string, string> currentGroup;
+        List<Dictionary<string, string>> _groups;
+        Dictionary<string, string> _currentGroup;
         public KeyValueBuilder() {
-            groups = new List<Dictionary<string, string>>{};
+            _groups = new List<Dictionary<string, string>>{};
         }
-        public void startNewGroup(int groupId) {
-            if (currentGroup != null) {
-                finalizeGroup();
+        public void StartNewGroup(int groupId) {
+            if (_currentGroup != null) {
+                FinalizeGroup();
             }
-            currentGroup = new Dictionary<string, string>{["_id"] = groupId.ToString()};
+            _currentGroup = new Dictionary<string, string>{["_id"] = groupId.ToString()};
         }
 
-        public void finalizeGroup() {
-            if (currentGroup == null) {
+        public void FinalizeGroup() {
+            if (_currentGroup == null) {
                 throw new System.InvalidOperationException();
             }
-            groups.Add(currentGroup);
-            currentGroup = null;
+            _groups.Add(_currentGroup);
+            _currentGroup = null;
         }
 
-        public void addProperty(string key, string value) {
-            if (currentGroup == null) {
+        public void AddProperty(string key, string value) {
+            if (_currentGroup == null) {
                 throw new System.InvalidOperationException();
             }
-            currentGroup.Add(key, value);
+            _currentGroup.Add(key, value);
         }
 
-        public List<Dictionary<string, string>> toGroupList() {
-            if (currentGroup != null) {
-                finalizeGroup();
+        public List<Dictionary<string, string>> ToGroupList() {
+            if (_currentGroup != null) {
+                FinalizeGroup();
             }
-            return groups;
+            return _groups;
         }
     }
 }

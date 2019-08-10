@@ -10,11 +10,11 @@ using System;
 
 namespace CardIndexer {
     class SheetsGrepper : IGrepper {
-        static string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
-        static string ApplicationName = "CardIndexer";
+        static string[] _scopes = { SheetsService.Scope.SpreadsheetsReadonly };
+        static string _applicationName = "CardIndexer";
 
-        UserCredential credential;
-        SheetsService service;
+        UserCredential _credential;
+        SheetsService _service;
 
         public SheetsGrepper() {
             using (var stream =
@@ -23,26 +23,26 @@ namespace CardIndexer {
                 // The file token.json stores the user's access and refresh tokens, and is created
                 // automatically when the authorization flow completes for the first time.
                 string credPath = "token.json";
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+                _credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.Load(stream).Secrets,
-                    Scopes,
+                    _scopes,
                     "user",
                     CancellationToken.None,
                     new FileDataStore(credPath, true)).Result;
                 Console.WriteLine("Credential file saved to: " + credPath);
             }
 
-            service =  new SheetsService(new BaseClientService.Initializer()
+            _service =  new SheetsService(new BaseClientService.Initializer()
             {
-                HttpClientInitializer = credential,
-                ApplicationName = ApplicationName,
+                HttpClientInitializer = _credential,
+                ApplicationName = _applicationName,
             });
 
         }
         public IEnumerable<List<Dictionary<string, string>>> Fetch(string sheetsId, string tableName)
         {
             // TODO to extend maximum row further Z
-            var propertyValues = service.Spreadsheets.Values.Get(sheetsId, String.Format("{0}!A{1}:Z{2}", tableName, 1, 1)).Execute().Values;
+            var propertyValues = _service.Spreadsheets.Values.Get(sheetsId, String.Format("{0}!A{1}:Z{2}", tableName, 1, 1)).Execute().Values;
 
             if (propertyValues == null || propertyValues.Count == 0) {
                 yield break;
@@ -54,7 +54,7 @@ namespace CardIndexer {
             for (int group = 0; ; group++) {
                 const int groupSize = 10;
                 // TODO to extend maximum row further Z
-                SpreadsheetsResource.ValuesResource.GetRequest request = service.Spreadsheets.Values.Get(sheetsId, String.Format("{0}!A{1}:Z{2}", tableName,
+                SpreadsheetsResource.ValuesResource.GetRequest request = _service.Spreadsheets.Values.Get(sheetsId, String.Format("{0}!A{1}:Z{2}", tableName,
                                                                                                         group * groupSize + 2, (group + 1) * groupSize + 1));
                 var response = request.Execute();
                 if (response.Values == null || response.Values.Count == 0) {
@@ -65,7 +65,7 @@ namespace CardIndexer {
                 for (int rowId = 0; rowId < response.Values.Count; rowId++)
                 {
                     var recordId = (group * groupSize + 2) + rowId;
-                    builder.startNewGroup(recordId);
+                    builder.StartNewGroup(recordId);
                     var row = response.Values[rowId];
                     for (int i = 0; i < propertiesCount; i++)
                     {
@@ -87,11 +87,11 @@ namespace CardIndexer {
                         // }
                         // Push to some dict instead
 
-                        builder.addProperty(currentKey, value);
+                        builder.AddProperty(currentKey, value);
                     }
-                    builder.finalizeGroup();
+                    builder.FinalizeGroup();
                 }
-                yield return builder.toGroupList();
+                yield return builder.ToGroupList();
             }
             yield break;
         }
