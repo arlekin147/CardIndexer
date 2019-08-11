@@ -5,8 +5,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Apis.Sheets.v4" Version="1.40.3.1671"/>
+    <PackageReference Include="NLog" Version="4.6.6"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Carbon.Toml" Version="0.16.0" />
+    <PackageReference Include="Carbon.Toml" Version="0.16.0"/>
   </ItemGroup>
 </Project>
