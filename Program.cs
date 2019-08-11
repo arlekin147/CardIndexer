@@ -9,11 +9,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using CardIndexer.Configuration;
+using NLog;
 
 namespace CardIndexer
 {
     class Program
     {
+
+        private static Logger Logger = LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
             var grepper = new SheetsGrepper();
@@ -39,8 +42,6 @@ namespace CardIndexer
             }
 
             Console.Read();
-
-            NLog.LogManager.Shutdown();
         }
     }
 }
