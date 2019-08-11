@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using NLog;
 
 namespace CardIndexer {
     class ImportanceFilter : IFilter
     {
-        static NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        static Logger _logger = LogManager.GetCurrentClassLogger();
         IList<string> _mainFields;
         public ImportanceFilter(IList<string> mainFields)
         {

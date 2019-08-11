@@ -7,10 +7,11 @@ using Google.Apis.Util.Store;
 using System.IO;
 using System.Threading;
 using System;
+using NLog;
 
 namespace CardIndexer {
     class SheetsGrepper : IGrepper {
-        static NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        static Logger _logger = LogManager.GetCurrentClassLogger();
         static string[] _scopes = { SheetsService.Scope.SpreadsheetsReadonly };
         static string _applicationName = "CardIndexer";
 
