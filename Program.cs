@@ -18,6 +18,7 @@ namespace CardIndexer
         {
             var grepper = new SheetsGrepper();
             var data = grepper.Fetch("1wG0fe0cv157kIsbGqapP_2n8hzQRET0VspU0t6KyNuU", "Class Data");
+            data = new ImportanceFilter(new List<string>{"Student Name", "Major"}).Accept(data);
             foreach (var group in data) {
                 Console.WriteLine("Group begins");
                 foreach (var item in group) {
@@ -38,6 +39,8 @@ namespace CardIndexer
             }
 
             Console.Read();
+
+            NLog.LogManager.Shutdown();
         }
     }
 }
