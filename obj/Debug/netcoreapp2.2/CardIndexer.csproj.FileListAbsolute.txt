@@ -26,3 +26,8 @@ C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.AssemblyInfoInput
 C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.AssemblyInfo.cs
 C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.dll
 C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.pdb
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.deps.json
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.runtimeconfig.json
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.runtimeconfig.dev.json
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.dll
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.pdb

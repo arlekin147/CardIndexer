@@ -9,8 +9,8 @@ using System.Threading;
 using System;
 using NLog;
 
-namespace CardIndexer {
-    class SheetsGrepper : IGrepper {
+namespace CardIndexer.Fetcher {
+    public class SheetsGrepper : IGrepper {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private static readonly string[] _scopes = { SheetsService.Scope.SpreadsheetsReadonly };
         private static readonly string _applicationName = "CardIndexer";

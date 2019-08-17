@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using NLog;
 
-namespace CardIndexer {
-    class ImportanceFilter : IFilter
+namespace CardIndexer.Filter {
+    public class ImportanceFilter : IFilter
     {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         // private readonly IList<string> _mainFields;

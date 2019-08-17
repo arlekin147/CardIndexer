@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
-namespace CardIndexer {
-    interface IGroupBuilder {
+namespace CardIndexer.Fetcher {
+    public interface IGroupBuilder {
         void StartNewGroup(int groupId);
         void FinalizeGroup();
         List<Dictionary<string, string>> ToGroupList();

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
-namespace CardIndexer {
-    class KeyValueBuilder : IGroupBuilder {
+namespace CardIndexer.Fetcher {
+    public class KeyValueBuilder : IGroupBuilder {
 
         private List<Dictionary<string, string>> _groups;
         private Dictionary<string, string> _currentGroup;
