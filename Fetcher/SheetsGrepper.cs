@@ -11,12 +11,12 @@ using NLog;
 
 namespace CardIndexer {
     class SheetsGrepper : IGrepper {
-        static Logger _logger = LogManager.GetCurrentClassLogger();
-        static string[] _scopes = { SheetsService.Scope.SpreadsheetsReadonly };
-        static string _applicationName = "CardIndexer";
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+        private static readonly string[] _scopes = { SheetsService.Scope.SpreadsheetsReadonly };
+        private static readonly string _applicationName = "CardIndexer";
 
-        UserCredential _credential;
-        SheetsService _service;
+        private UserCredential _credential;
+        private SheetsService _service;
 
         public SheetsGrepper() {
             using (var stream =

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj": {}
+    "C:\\Users\\14714\\CardIndexer\\CardIndexer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj": {
+    "C:\\Users\\14714\\CardIndexer\\CardIndexer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj",
+        "projectUniqueName": "C:\\Users\\14714\\CardIndexer\\CardIndexer.csproj",
         "projectName": "CardIndexer",
-        "projectPath": "C:\\Users\\USER\\CardIndexer\\CardIndexer.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\CardIndexer\\obj\\",
+        "projectPath": "C:\\Users\\14714\\CardIndexer\\CardIndexer.csproj",
+        "packagesPath": "C:\\Users\\14714\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\14714\\CardIndexer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\14714\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.6.6, )"
             }
           },
           "imports": [

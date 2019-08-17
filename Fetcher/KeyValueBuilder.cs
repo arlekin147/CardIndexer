@@ -3,8 +3,8 @@ using System.Collections.Generic;
 namespace CardIndexer {
     class KeyValueBuilder : IGroupBuilder {
 
-        List<Dictionary<string, string>> _groups;
-        Dictionary<string, string> _currentGroup;
+        private List<Dictionary<string, string>> _groups;
+        private Dictionary<string, string> _currentGroup;
         public KeyValueBuilder() {
             _groups = new List<Dictionary<string, string>>{};
         }
