@@ -20,3 +20,14 @@ C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.AssemblyInfoInputs
 C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.AssemblyInfo.cs
 C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.dll
 C:\Users\USER\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.pdb
+C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.csprojAssemblyReference.cache
+C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.csproj.CoreCompileInputs.cache
+C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.AssemblyInfoInputs.cache
+C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.AssemblyInfo.cs
+C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.dll
+C:\Users\14714\CardIndexer\obj\Debug\netcoreapp2.2\CardIndexer.pdb
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.deps.json
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.runtimeconfig.json
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.runtimeconfig.dev.json
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.dll
+C:\Users\14714\CardIndexer\bin\Debug\netcoreapp2.2\CardIndexer.pdb

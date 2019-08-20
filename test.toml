@@ -4,5 +4,5 @@
 googleSheetSource = "ogo"
 
 [DataModel]
-name = "Person"
-mainFields = ["Name", "Surname", "Age"]
+name = "Student"
+mainFields = ["Student Name", "Major"]

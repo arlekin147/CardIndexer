@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "cbf54e8e79de13dc1cb1ad51e3f9d5d57d762bce"
+    "signature": "2c4bc285e3f38e7970e342e5b58010d07bde2241"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,7 +9,8 @@
       "CardIndexer/1.0.0": {
         "dependencies": {
           "Carbon.Toml": "0.16.0",
-          "Google.Apis.Sheets.v4": "1.40.3.1671"
+          "Google.Apis.Sheets.v4": "1.40.3.1671",
+          "NLog": "4.6.6"
         },
         "runtime": {
           "CardIndexer.dll": {}
@@ -120,6 +121,14 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.2.20802"
+          }
+        }
+      },
+      "NLog/4.6.6": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.6.10303"
           }
         }
       },
@@ -515,6 +524,13 @@
       "sha512": "sha512-iwElSU2IXmwGvytJsezyDML2ZWDkG2JzTYzlU/BNlmzMdlmRvbnwITsGGY74gwVEpDli1UdOLkMT7/3jxWvXzA==",
       "path": "newtonsoft.json/10.0.2",
       "hashPath": "newtonsoft.json.10.0.2.nupkg.sha512"
+    },
+    "NLog/4.6.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QKnuNsfXpdL0u5oP37c2tSERjx1Zgt7uQD5n1H8oIxbMTUiha4NZYWc8vStCueMMmIyTWhI+lTle73/DMpDMYw==",
+      "path": "nlog/4.6.6",
+      "hashPath": "nlog.4.6.6.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
