@@ -1,32 +1,52 @@
 using System.Collections.Generic;
 using System.IO;
+using System;
+using NLog;
 
 namespace CardIndexer.PageGenerators
 {
     class MDEntitiesGenerator : IEntitiesGenerator
     {
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         public void Generate(string path, IEnumerable<List<Dictionary<string, string>>> entityGroups, IEnumerator<string> ids)
         {
+            var datetime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssK");
             foreach (var group in entityGroups)
             {
                 foreach (var entity in group)
                 {
-                    string id = ids.Current;
-                    using (StreamWriter writter = new StreamWriter(string.Format("{0}{1}{2}.md", path, Path.DirectorySeparatorChar, id)))
+                    if (!ids.MoveNext())
                     {
-                        writter.WriteLine("title: \"{0}\"", 'A');
-                        writter.WriteLine("date: {0}", "");
-                        writter.WriteLine("draft: {0}", "false");
+                        _logger.Error("ID generator is over unexpectedly");
+                        // Replace with a custom exception
+                        throw new Exception("ID generator is over unexpectedly");
+                    }
 
-                        foreach (var record in entity)
+                    string id = ids.Current;
+                    _logger.Trace("Generating {0}", id);
+                    try
+                    {
+                        using (StreamWriter writter = new StreamWriter(string.Format("{0}{1}{2}.md", path, Path.DirectorySeparatorChar, id)))
                         {
-                            if (record.Key.Equals("_id"))
-                            {
-                                continue;
-                            }
+                            writter.WriteLine("---");
+                            writter.WriteLine("title: \"{0}\"", id);
+                            writter.WriteLine("date: {0}", datetime);
+                            writter.WriteLine("draft: {0}", "false");
+                            writter.WriteLine("---");
 
-                            writter.WriteLine("{{<reg_pair key = \"{0}\" value = \"{1}\">}}", record.Key, record.Value);
+                            foreach (var record in entity)
+                            {
+                                if (record.Key.Equals("_id"))
+                                {
+                                    continue;
+                                }
+
+                                writter.WriteLine("{{{{<reg_pair key = \"{0}\" value = \"{1}\">}}}}", record.Key, record.Value);
+                            }
                         }
+                    }
+                    catch (DirectoryNotFoundException e) {
+                        _logger.Error(e, "No output directory");
                     }
                 }
             }
