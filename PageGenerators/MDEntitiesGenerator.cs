@@ -3,6 +3,8 @@ using System.IO;
 using System;
 using NLog;
 
+using CardIndexer.Configuration;
+
 namespace CardIndexer.PageGenerators
 {
     class MDEntitiesGenerator : IEntitiesGenerator
@@ -17,9 +19,8 @@ namespace CardIndexer.PageGenerators
                 {
                     if (!ids.MoveNext())
                     {
-                        _logger.Error("ID generator is over unexpectedly");
-                        // Replace with a custom exception
-                        throw new Exception("ID generator is over unexpectedly");
+                        _logger.Error("ID numerator is over unexpectedly");
+                        throw new InvalidNumeratorException("ID numerator is over unexpectedly");
                     }
 
                     string id = ids.Current;
