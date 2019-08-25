@@ -8,6 +8,5 @@ namespace CardIndexer.Configuration
         public InvalidNumeratorException(string message) : base(message){}
         public InvalidNumeratorException(string message, Exception innerException)
         :base(message, innerException){}
-        
     }
 }
