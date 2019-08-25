@@ -11,6 +11,7 @@ using System.Threading;
 using CardIndexer.Configuration;
 using NLog;
 using CardIndexer.Samples;
+using CardIndexer.PageGenerators;
 
 namespace CardIndexer
 {
@@ -21,6 +22,7 @@ namespace CardIndexer
         static void Main(string[] args)
         {
             new IntegrationsSample().Run();
+            new IndexGeneratorSample().Run();
             Console.Read();
         }
     }
